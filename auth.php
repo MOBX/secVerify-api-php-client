@@ -1,12 +1,12 @@
 <?php
 $url = "http://identify.verify.mob.com/auth/auth/sdkClientFreeLogin";
 
-$appkey = "moba6b6c6d6";
-$appSecret = "b89d2427a3bc7ad1aea1e1e8c1d36bf3";
-$token = "59616292321333248";
-$opToken = "opToken";
-$operator = "CUCC";
-$md5 = "";
+$appkey = "";
+$appSecret = "";
+$token = "74549593313083392";
+$opToken = "STsid0000001564046011594ry0fzna6bgCQwp00Lh4hCThy10WTpQd2";
+$operator = "CMCC";
+$md5 = "811251dbb9c56b39e2a2d89702be6524";
 
 function getSign($data, $secret) {
     ksort($data);
@@ -110,7 +110,7 @@ $post_data = array(
     "token" => $token,
     "opToken" => $opToken,
     'operator'=> $operator,
-    'timestamp'=> time()
+    'timestamp'=> 1564046825531
 );
 if ($md5 != '') {
     $post_data['md5'] = $md5;
