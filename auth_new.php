@@ -57,10 +57,10 @@ curl_close($curl);
 $json = json_decode($data);
 
 if ($json->status == 200) {
-    $d = openssl_decrypt($json->res, "", $appSecret, 0, "00000000");
+    $d = openssl_decrypt($json->res, "DES-CBC", $appSecret, 0, "00000000");
 //    $des = new CryptDes($appSecret);
 //    $json->res = $des->decrypt($json->res);
-    $json->res = json_decode($d);
+    $json->res = json_decode($d, true);
 }
 //显示获得的数据
 print_r($json);
