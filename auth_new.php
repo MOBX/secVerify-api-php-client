@@ -45,7 +45,7 @@ if ($md5 != '') {
 $post_data['sign'] = getSign($post_data, $appSecret);
 $jsonStr = json_encode($post_data);
 curl_setopt($curl, CURLOPT_POSTFIELDS, $jsonStr);
-curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+curl_setopt($curl, CURLOPT_HTTPHEADER, array(
         'Content-Type: application/json; charset=utf-8',
         'Content-Length: ' . strlen($jsonStr)
     )
