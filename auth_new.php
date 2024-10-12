@@ -1,5 +1,5 @@
 <?php
-$host = "http://identify.verify.mob.com";
+$host = "http://identify-auth.zztfly.com";
 $url = "{$host}/auth/auth/sdkClientFreeLogin";
 
 $appkey = "";
